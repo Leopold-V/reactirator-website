@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
@@ -7,9 +7,9 @@
     <title>Reactirator</title>
   </head>
   <body>
-    <nav class="bg-zinc-800">
+    <nav class="fixed z-10 w-full bg-zinc-800">
       <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="relative flex h-16 items-center justify-between">
+        <div class="relative flex h-14 items-center justify-between">
           <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
             <!-- Mobile menu button-->
             <button
@@ -69,15 +69,15 @@
             <div class="hidden flex-grow sm:ml-6 sm:block">
               <div class="flex justify-center space-x-4">
                 <a
-                  href="#"
-                  class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+                  href="#hero"
+                  class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
                   aria-current="page"
                   >Home</a
                 >
                 <a
-                  href="#"
+                  href="#features"
                   class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                  >Faq</a
+                  >features</a
                 >
               </div>
             </div>
@@ -104,21 +104,25 @@
       <div class="sm:hidden" id="mobile-menu">
         <div class="space-y-1 px-2 pt-2 pb-3">
           <a
-            href="#"
+            href="#hero"
             class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
             aria-current="page"
             >Home</a
           >
           <a
-            href="#"
+            href="#features"
             class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-            >Faq</a
+            >Features</a
           >
         </div>
       </div>
     </nav>
 
-    <div class="flex justify-center bg-gray-50 px-4 py-16 lg:p-36">
+    <!-- hero section -->
+    <section
+      id="hero"
+      class="flex justify-center bg-gray-100 px-4 py-10 md:p-36"
+    >
       <div
         class="flex flex-col items-center space-x-0 space-y-16 lg:w-5/6 lg:flex-row lg:space-x-8 lg:space-y-0"
       >
@@ -132,6 +136,7 @@
               A desktop application to create and
               <span class="block">manage React.js applications easily.</span>
             </p>
+            <p class="font-normal text-gray-700">Free & Open source.</p>
             <div class="inline-flex w-full">
               <a
                 href="https://github.com/Leopold-V/Reactirator/releases"
@@ -143,48 +148,136 @@
           </div>
         </div>
         <div class="flex w-2/3 justify-center lg:w-1/2">
-          <img
-            src="https://camo.githubusercontent.com/9486cf4d106bc6b37e5dfef025b603a7f5dc79048a45718081c14e823f1207ab/68747470733a2f2f692e6779617a6f2e636f6d2f32316261366262363734663463316230626532613032323532353732623338352e706e67"
-            alt="reactirator_screen"
-            class="w-96 rotate-12 shadow-lg duration-200 hover:rotate-0 lg:w-96"
-          />
+          <div class="container_hero_image p-1">
+            <img
+              src="https://i.gyazo.com/c72ded9dc26fb1acf929fe8150e3b34c.png"
+              alt="reactirator_screen"
+              class="hero_image w-96 shadow-lg lg:w-96"
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="flex justify-center p-16 sm:flex-col sm:p-36">
-      <div class="lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8">
-        <h2
-          class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+    <!-- feature section -->
+    <section class="space-y-28 py-10 px-4 md:py-36">
+      <div id="features" class="bg-white">
+        <div class="text-center text-gray-800">
+          <h2 class="pb-6 text-2xl font-extrabold md:text-5xl">
+            What is <span class="text-indigo-600">Reactirator</span> ?
+          </h2>
+          <p class="block">
+            Reactirator is a desktop application built with Electron using
+            TypeScript, React and Node.
+          </p>
+          <p class="block">
+            It has two parts which can be considered as two differents
+            applications:
+          </p>
+        </div>
+      </div>
+
+      <!-- Manager section -->
+      <div class="flex justify-center bg-white">
+        <div
+          class="flex flex-col items-center space-x-0 space-y-16 lg:w-5/6 lg:flex-row lg:space-x-8 lg:space-y-0"
         >
-          <span class="block">Ready to dive in?</span>
-          <span class="block text-indigo-600">Get Reactirator now.</span>
-        </h2>
-        <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-          <div class="inline-flex rounded-md shadow">
-            <a
-              href="https://github.com/Leopold-V/Reactirator/releases"
-              class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700"
-            >
-              Download
-            </a>
+          <div class="flex w-2/3 justify-center lg:w-1/2">
+            <div class="p-1">
+              <img
+                src="https://camo.githubusercontent.com/1f83d123252a54d1257e30567be725193042b06eaf3c1499b01107cb90f80495/68747470733a2f2f692e6779617a6f2e636f6d2f34316432306631313761646166656532313133633464333161646336656535382e706e67"
+                alt="reactirator_screen"
+                class="hero_image w-96 shadow-lg lg:w-96"
+              />
+            </div>
           </div>
-          <div class="ml-3 inline-flex rounded-md shadow">
-            <a
-              href="#"
-              class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50"
-            >
-              Learn more
-            </a>
+          <div
+            class="flex h-full flex-col items-center justify-center lg:w-1/2"
+          >
+            <div class="w-4/6 space-y-3">
+              <h3 class="text-3xl font-extrabold">The manager</h3>
+              <p>
+                Start your development server, your tests, build, execute any
+                tasks you have in your scripts section, modify your project
+                dependencies, or generate components in no time!
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+
+      <!-- Creator section -->
+      <div class="flex justify-center bg-white">
+        <div
+          class="flex flex-col items-center space-x-0 space-y-16 lg:w-5/6 lg:flex-row lg:space-x-8 lg:space-y-0"
+        >
+          <div
+            class="flex h-full flex-col items-center justify-center lg:w-1/2"
+          >
+            <div class="w-4/6 space-y-3">
+              <h3 class="text-3xl font-extrabold">The creator</h3>
+              <p>
+                Generate a React project, you can select famous React
+                configs/features, look for packages, pre-generate folders and
+                components, pick your tools and don't bother anymore with the
+                project configurations!
+              </p>
+            </div>
+          </div>
+          <div class="flex w-2/3 justify-center lg:w-1/2">
+            <div class="container_hero_image p-1">
+              <img
+                src="https://camo.githubusercontent.com/9486cf4d106bc6b37e5dfef025b603a7f5dc79048a45718081c14e823f1207ab/68747470733a2f2f692e6779617a6f2e636f6d2f32316261366262363734663463316230626532613032323532353732623338352e706e67"
+                alt="reactirator_screen"
+                class="hero_image w-96 shadow-lg lg:w-96"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- install catch section -->
+    <section
+      class="flex justify-center bg-gray-100 px-16 py-16 sm:flex-col md:px-32 md:py-36"
+    >
+      <div class="mx-auto md:w-5/6">
+        <div
+          class="lg:flex lg:items-center lg:justify-between lg:py-16 lg:px-8"
+        >
+          <h2
+            class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+          >
+            <span class="block">Ready to dive in?</span>
+            <span class="block text-indigo-600">Get Reactirator now.</span>
+          </h2>
+          <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
+            <div class="inline-flex rounded-md shadow">
+              <a
+                href="https://github.com/Leopold-V/Reactirator/releases"
+                class="inline-flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-5 py-3 text-base font-medium text-white hover:bg-indigo-700"
+              >
+                Download
+              </a>
+            </div>
+            <div class="ml-3 inline-flex rounded-md shadow">
+              <a
+                href="https://github.com/Leopold-V/Reactirator"
+                class="inline-flex items-center justify-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-medium text-indigo-600 hover:bg-indigo-50"
+              >
+                Learn more
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer class="bg-zinc-800 p-8 text-center">
       <span class="text-sm text-gray-500 dark:text-gray-400 sm:text-center"
         >© 2022
-        <a href="http://localhost:3000/" class="hover:underline">Reactirator™</a
+        <a href="http://reactirator.surge.sh/" class="hover:underline"
+          >Reactirator™</a
         >. All Rights Reserved.
       </span>
     </footer>
