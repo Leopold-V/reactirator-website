@@ -26,7 +26,6 @@ mouseOverContainer.onmousemove = function (e) {
   let xy = [e.clientX, e.clientY];
   let position = xy.concat([ex1Layer]);
 
-  console.log(position);
   window.requestAnimationFrame(function () {
     transformElement(ex1Layer, position);
   });
